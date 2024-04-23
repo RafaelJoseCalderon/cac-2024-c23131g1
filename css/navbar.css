@@ -1,0 +1,152 @@
+* {
+  font-family: Cantarell;
+  box-sizing: content-box;
+
+  --base50: #f0faff;
+  --base100: #dff5ff;
+  --base200: #b5ecff;
+  --base300: #79e0ff;
+  --base400: #32d1fe;
+  --base500: #07bbf0;
+  --base600: #0098cd;
+  --base700: #0078a6;
+  --base800: #036689;
+  --base900: #095471;
+  --base950: #06354b;
+}
+
+/* #region general */
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  width: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+/* #endregion */
+
+/* #region general */
+header {
+  --ub: 0.5rem; /* unit base */
+  background-color: var(--base100);
+}
+
+nav, .title {
+  display: flex;
+}
+
+nav {
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.title {
+  align-items: center;
+  width: calc(100% - 8 * var(--ub));
+}
+
+.title a, .toggler, .nav-button {
+  color: var(--base700);
+
+  margin: var(--ub);
+  padding: var(--ub);
+}
+
+.title a, .nav-button a {
+  color: var(--base700);
+
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.title a:hover, .nav-button:hover {
+  background-color: var(--base50);
+}
+
+.title a:hover, .toggler, .nav-button:hover {
+  border: 1px solid lavender;
+  border-radius: 0.375rem;
+
+  margin: calc(var(--ub) + 1px);
+  padding: calc(var(--ub) - 2px);
+}
+
+.toggler {
+  font-size: calc(2.5 * var(--ub));
+  background-color: transparent;
+  color: var(--base700);
+}
+
+.toggler:hover {
+  background-color: var(--base50);
+}
+
+.toggler-icon {
+  display: inline-block;
+  width: calc(3 * var(--ub));
+  height: calc(3 * var(--ub));
+  vertical-align: middle;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%
+}
+
+.nav-button {
+  list-style: none;
+}
+
+.collapse:not(.show) {
+  display: none
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height .35s ease
+}
+
+.menu {
+  width: 100%;
+  
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width:768px) {
+  nav {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  .title {
+    position: absolute;
+    width: auto;
+  }
+
+  .toggler {
+    display: none;
+  }
+
+  .collapse:not(.show), .collapse.show {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* #endregion */
