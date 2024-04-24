@@ -1,5 +1,3 @@
-const navbar = document.getElementById('navbar');
-
 class NavBarCollapsebles {
   constructor(varargin) {
     this.button = document.getElementById(varargin.button);
@@ -77,9 +75,16 @@ class NavBarCollapsebles {
   };
 }
 
+
 (() => {
-  new NavBarCollapsebles({
-    button: 'button-toggler',
-    container: 'navbar-collapse',
-  });
+  const navbar = document.getElementById('navbar');
+
+  if (navbar && navbar.classList.contains('fixed-top')) {
+    document.body.style.marginTop = `${navbar.scrollHeight + 2}px`
+
+    new NavBarCollapsebles({
+      button: 'button-toggler',
+      container: 'navbar-collapse',
+    });
+  }
 })();

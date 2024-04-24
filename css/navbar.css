@@ -1,47 +1,18 @@
-* {
-  font-family: Cantarell;
-  box-sizing: content-box;
-
-  --base50: #f0faff;
-  --base100: #dff5ff;
-  --base200: #b5ecff;
-  --base300: #79e0ff;
-  --base400: #32d1fe;
-  --base500: #07bbf0;
-  --base600: #0098cd;
-  --base700: #0078a6;
-  --base800: #036689;
-  --base900: #095471;
-  --base950: #06354b;
-}
-
 /* #region general */
-html,
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-}
-
 header {
-  display: flex;
+  --ub: 0.5rem;
   width: 100%;
-}
-
-main {
-  flex: 1;
-}
-
-/* #endregion */
-
-/* #region general */
-header {
-  --ub: 0.5rem; /* unit base */
   background-color: var(--base100);
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 
-nav, .title {
+nav,
+.title {
   display: flex;
 }
 
@@ -77,8 +48,8 @@ nav {
   border: 1px solid lavender;
   border-radius: 0.375rem;
 
-  margin: calc(var(--ub) + 1px);
-  padding: calc(var(--ub) - 2px);
+  margin: calc(var(--ub) - 2.25px);
+  padding: calc(var(--ub) - 2.25px);
 }
 
 .toggler {
@@ -118,7 +89,7 @@ nav {
 
 .menu {
   width: 100%;
-  
+
   margin: 0;
   padding: 0;
 }

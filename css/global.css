@@ -1,0 +1,39 @@
+* {
+  font-family: Cantarell;
+  box-sizing: content-box;
+
+  --base50: #f0faff;
+  --base100: #dff5ff;
+  --base200: #b5ecff;
+  --base300: #79e0ff;
+  --base400: #32d1fe;
+  --base500: #07bbf0;
+  --base600: #0098cd;
+  --base700: #0078a6;
+  --base800: #036689;
+  --base900: #095471;
+  --base950: #06354b;
+
+  --header-height: 4rem;
+}
+
+/* #region general */
+html, body, header {
+  display: flex;
+}
+
+html, body {
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+header, footer {
+  width: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+/* #endregion */
