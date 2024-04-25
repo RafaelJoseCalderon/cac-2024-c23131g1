@@ -1,12 +1,9 @@
 /* #region general */
 header {
-  --ub: 0.5rem;
   --font-size: 1.25rem;
-
   --margin-basic: 0.25rem;
   --padding-basic: 0.25rem;
-
-  --toggler-size: 2.25rem;
+  --height: 3rem;
   --border: 1px;
 
   width: 100%;
@@ -39,8 +36,9 @@ nav {
   display: flex;
   align-items: center;
 
-  width: calc(100% - 2 * var(--border) - 2 * var(--margin-basic) - 2 * var(--padding-basic) - var(--toggler-size) - 0.5rem);
-  height: calc(var(--toggler-size) + 2 * var(--border));
+  box-sizing: border-box;
+  width: calc(100% - var(--height) - 2 * var(--margin-basic) - 0.5rem);
+  height: calc(var(--height));
 
   margin: var(--margin-basic) 0;
   padding: var(--padding-basic);
@@ -71,8 +69,9 @@ nav {
   background-color: transparent;
   color: var(--base700);
 
-  width: var(--toggler-size);
-  height: var(--toggler-size);
+  box-sizing: border-box;
+  width: var(--height);
+  height: var(--height);
 
   margin: var(--margin-basic);
   padding: var(--padding-basic);
@@ -90,8 +89,8 @@ nav {
   background-position: center;
   background-size: 100%;
 
-  width: calc(0.75 * var(--toggler-size));
-  height: calc(0.75 * var(--toggler-size));
+  width: calc(0.60 * var(--height));
+  height: calc(0.60 * var(--height));
 
   vertical-align: middle;
 }
@@ -110,7 +109,8 @@ nav {
   color: var(--base700);
 
   list-style: none;
-  height: calc(var(--toggler-size) + 2 * var(--border) - var(--margin-basic) - 3 * var(--padding-basic));
+  box-sizing: border-box;
+  height: var(--height);
 
   vertical-align: middle;
   text-decoration: none;
