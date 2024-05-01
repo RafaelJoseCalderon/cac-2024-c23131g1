@@ -8,10 +8,17 @@ main {
   --padding-basic: 0.25rem;
   --height: 3rem;
   --border: 1px;
-  --card-zise: 15rem;
+  --radius: 8px;
+  --card-zise: calc(12.5rem + 2 * var(--border));
 
-  margin: 1rem;
-  padding: 1rem;
+  min-width: 12.5rem;
+
+  margin: 0;
+  padding: 0 calc(8 * var(--padding-basic));
+}
+
+.body-section {
+  margin: calc(8 * var(--padding-basic)) 0;
 }
 
 .title-section {
@@ -35,10 +42,9 @@ main {
 
 .box-container {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(200px, 1fr)
-  );
+
+  grid-template-columns: repeat(auto-fit,
+      minmax(var(--card-zise), 1fr));
 
   gap: 1rem;
 }
@@ -47,21 +53,46 @@ main {
   display: flex;
   flex-direction: column;
 
+  box-sizing: border-box;
   width: 100%;
   height: auto;
 
-  min-width: 200px;
+  border: var(--border) solid lavender;
+  border-radius: var(--radius);
+  box-shadow: 0 .25rem .25rem rgba(0, 0, 0, .075);
 
-  border: 1px solid lavender;
-  border-radius: 8px;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  transition: transform 0.2s;
+  transition-timing-function: linear;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.box:hover {
+  -webkit-transform: scale(1.025);
+  -ms-transform: scale(1.025);
+  transform: scale(1.025);
 }
 
 .box img {
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: var(--radius);
 }
 
 .box p {
-  margin: 1rem;
-  text-align: justify;
+  margin: var(--padding-basic) calc(2 * var(--padding-basic));
+  text-align: center;
 }
+
+.divider {
+  display: inline-block;
+  align-self: stretch;
+  height: 1px;
+  min-width: 1em;
+  background-color: currentcolor;
+  opacity: .25
+}
+
