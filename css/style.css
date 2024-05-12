@@ -14,8 +14,24 @@ body {
     /*font-family: Arial, sans-serif;*/
 }
 
-main{
+
+.descripcion {
+    background-color: #f6f7f8;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+/*main{
     background-color: #0079c1;
+}*/
+
+.tituloPrin{
+    margin: 10px 10px 10px 10px;
+    background-color: #5ABDAD;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
 }
 
 .header{
@@ -25,6 +41,7 @@ main{
     align-items: center;
     height: 85px;
     padding: 5px 3%;
+    position: relative; /* Agregado */
 }
 
 .header .logo img{
@@ -38,7 +55,13 @@ nav {
 
 .pie{
     background-color: #333;
-    justify-content: center;
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    z-index: 10;
+    width: 100%;
+    color: #f6f7f8; 
+    text-align: center;
 }
 
 
@@ -52,10 +75,15 @@ nav {
 }
 
 .menu-btn {
-    display: none;
+    display: none; 
+    background-color: #444;
+
+
 }
 
 .nav-menu {
+
+    
     display: flex;
     list-style-type: none;
 }
@@ -85,6 +113,10 @@ nav {
         display: none;
     }
 
+    body{
+        background-repeat: repeat;
+    }
+
     .menu-btn {
         display: block;
         color: #fff;
@@ -92,6 +124,10 @@ nav {
         padding: 0.5rem 1rem;
         border: none;
         cursor: pointer;
+    }
+
+    .nav-link {
+        color: #fff;
     }
 
     .nav-menu.show {
@@ -103,8 +139,13 @@ nav {
     .nav-link {
         padding: 0.5rem 1rem;
     }
+
+    body{
+        background-repeat: repeat;
+    }
+
+    .nav-link {
+        color: #fff;
+    }
 }
 
-.descripcion {
-    background-color: #f6f7f8;
-}
