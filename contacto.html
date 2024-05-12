@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width= device-width">
+        <title>Contacto Zapaterias Nino</title>
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/css/estilos-contacto.css">
+    </head>
+    <body>
+        <header>
+            <h1><img src="/img/logo1.jpg" alt=""></h1>
+        </header>
+        <main>
+            <div class="formulario">
+                <form>
+                    <fieldset class="imput">
+                        <label for="nombreyapellido">Nombre y Apellido: </label>
+                        <input type="text" id="nombreyapellido" class="input-padron" required>
+
+                         <label for="correoelectronico">Correo electronico</label>
+                        <input type="email" id="correoelectronico"class="input-padron" required placeholder="xxxx@xxxxx">
+
+                        <label for="telefono">Telefono</label>
+                        <input type="tel" id="telefono" class="input-padron" required placeholder="(xx)xxxxxxxx">
+
+                        <label for="mensaje">Mensaje</label>
+                        <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+                    </fieldset>
+                    <fieldset>  
+                        <legend>¿Cómo le gustaría que lo contactemos?</legend>
+              
+                        <label for="radio-email"><input type="radio" value="email" id="radio-email" name="radio"> Email</label>
+                          
+                        <label for="radio-telefono"><input type="radio" value="telefono" id="radio-telefono" name="radio"> Telefono</label>
+                          
+                        <label for="radio-WhatsApp"> <input type="radio" value="WhatsApp" id="radio-WhatsApp" name="radio" checked> WhatsApp</label>
+                        
+                        </fieldset>
+                      
+                          <input type="checkbox" id="checkbox" checked><label for="checkbox" class="label_checkbox"> ¿Le gustaría recibir nuestras ofertas por WhatsApp</label>
+                          <input type="submit" id="submit" value="Enviar Formulario">
+                              
+                      </form>
+                    </div>
+                      <table>
+                        <!-- <tr> table rows -->
+                        <thead>
+                        <!-- td sigue la logica de pares ordenados -->
+                          <th>Día</th> 
+                          <th>Horario</th>
+                        </thead>
+              
+                        <tbody>
+                          <tr>
+                            <td>Lunes</td>
+                            <td>8:00 a 20 hs</td>
+                          </tr>
+                          <tr>
+                            <td>Miércoles</td>
+                            <td>8:00 a 20 hs</td>
+                          </tr>
+                          <tr>
+                            <td>Viernes</td>
+                            <td>8:00 a 20 hs</td>
+                          </tr>
+                        </tbody>
+                      </table>
+              
+                  </main>
+              
+                  <footer>
+                    <img src="img/logo-blanco.png">
+                    <p class="copyright">Codo a Codo 2024</p>
+                  </footer>
+                  <script src="index.js"></script>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
