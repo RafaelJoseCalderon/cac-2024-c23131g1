@@ -1,5 +1,7 @@
 form {
     margin: 5% 5%;
+    border: 0;
+    
   }
   
   form label, form legend{
