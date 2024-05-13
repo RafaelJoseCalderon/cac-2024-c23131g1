@@ -133,6 +133,10 @@ nav {
     .nav-menu.show {
         display: flex;
     }
+
+    .pie{
+        bottom: unset;
+    }  
 }
 
 @media screen and (max-width: 480px) {
@@ -146,6 +150,20 @@ nav {
 
     .nav-link {
         color: #fff;
+    }
+
+    .pie{
+        bottom: unset;
+    }  
+
+    .tituloPrin{
+        margin: auto;
+        background-color: #5ABDAD;
+        border-radius: 5px;
+        height: auto;
+        width: auto;
+        padding: 10px;
+
     }
 }
 
