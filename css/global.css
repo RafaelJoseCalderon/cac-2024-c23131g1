@@ -1,8 +1,20 @@
 * {
-  font-family: Cantarell;
+  font-family: "Nunito", sans-serif;
   box-sizing: content-box;
 
-  --base50: #f0faff;
+  --base50: #f6f7f8;
+  --base100: #edeff1;
+  --base200: #d7dce0;
+  --base300: #b5bec4;
+  --base400: #8c9ba4;
+  --base500: #6e7e89;
+  --base600: #586671;
+  --base700: #48535c;
+  --base800: #3e464e;
+  --base900: #373e43;
+  --base950: #24282d;
+
+  /* --base50: #f0faff;
   --base100: #dff5ff;
   --base200: #b5ecff;
   --base300: #79e0ff;
@@ -12,7 +24,7 @@
   --base700: #0078a6;
   --base800: #036689;
   --base900: #095471;
-  --base950: #06354b;
+  --base950: #06354b; */
 
   --header-height: 4rem;
 }

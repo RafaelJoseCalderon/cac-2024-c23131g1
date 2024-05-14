@@ -50,6 +50,7 @@ main {
   height: var(--height);
 
   margin: var(--margin-basic) 0;
+  margin-bottom: calc(2 * var(--margin-basic));
   padding: var(--padding-basic) 0;
 }
 

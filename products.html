@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/navbar.css">
@@ -12,30 +13,34 @@
 
   <link rel="stylesheet" href="statics/fontawesome-free-652-web/css/all.min.css">
 
-  <title>La Zapateria de Nino</title>
+  <!--google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <!--google font-->
+
+  <title>Zapateria Nino</title>
+
 </head>
 
 <body>
-  <header>
-    <nav id="navbar" class="fixed-top">
+  <header id="nav-header" class="header">
 
-      <span class="title">
-        <a href="">
-          <div>LLd13 (icon)</div>
-        </a>
-      </span>
+    <div class="logo">
+      <img src="/img/logo1.png" alt="logo_nino">
+    </div>
 
-      <button id="button-toggler" class="toggler" data-collapsed="true" type="button">
-        <span class="toggler-icon"></span>
-      </button>
+    <nav class="nav-bar">
+      <button id="button-toggler" data-collapsed="true" class="menu-btn">Menu</button>
 
       <ul id="navbar-collapse" class="nav-menu collapse">
-        <li class="nav-button"><a href="index.html">Inicio</a></li>
-        <li class="nav-button"><a href="products.html">Productos</a></li>
-        <li class="nav-button"><a href="contact.html">Contacto</a></li>
+        <li class="nav-item"><a href="#">Inicio</a></li>
+        <li class="nav-item"><a href="./products.html">catalogo</a></li>
+        <li class="nav-item"><a href="#">Contacto</a></li>
       </ul>
 
     </nav>
+
   </header>
 
   <main>

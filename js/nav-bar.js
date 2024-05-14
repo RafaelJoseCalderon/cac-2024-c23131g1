@@ -77,10 +77,10 @@ class NavBarCollapsebles {
 
 
 (() => {
-  const navbar = document.getElementById('navbar');
+  const navHeader = document.getElementById('nav-header');
 
-  if (navbar && navbar.classList.contains('fixed-top')) {
-    document.body.style.marginTop = `${navbar.scrollHeight + 2}px`
+  if (navHeader) {
+    document.body.style.marginTop = `${navHeader.scrollHeight + 2}px`
 
     new NavBarCollapsebles({
       button: 'button-toggler',
