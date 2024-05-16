@@ -1,64 +1,92 @@
 const form = document.querySelector("#contact");
+const mapValid = [];
+
+// auxiliary functions
+const multipleEventListeners = (name, events, fn) => {
+    let input = form.elements[name]
+    events.forEach(e => input.addEventListener(e, fn, false));
+}
+
+const updateMapValid = (errortextContent) => {
+    if (errortextContent === "") {
+        mapValid.push("fullName");
+    } else {
+        mapValid.pop("fullName");
+    }
+}
+// end auxiliary functions
+
+const inputGroup = (name, regex) => {
+    let input = form.elements[name]
+    let error = input.parentNode.querySelector(".form-error");
+
+    return {
+        value: input.value,
+        regex: regex || "",
+        error: error
+    };
+}
 
 const fullNameValidation = () => {
-    let input = form.elements.fullName
-    let error = input.parentNode.querySelector(".form-error");
-    let regex = /^[A-Za-z]+$/;
+    let input = inputGroup("fullName", /^[A-Za-z]+$/);
 
     if (input.value === "") {
-        error.textContent = "El nombre y apellido son requeridos";
+        input.error.textContent = "El nombre y apellido son requeridos";
     } else if (input.value?.length > 15) {
-        error.textContent = "El maximo de caracteres es de 15"
-    } else if (!regex.test(input.value)) {
-        error.textContent = "Debe contener solo letras mayusculas y/o minusculas"
+        input.error.textContent = "El maximo de caracteres es de 15";
+    } else if (!input.regex.test(input.value)) {
+        input.error.textContent = "Debe contener solo letras mayusculas y/o minusculas";
     } else {
-        error.textContent = ""
+        input.error.textContent = "";
     }
+
+    updateMapValid(input.error.textContent);
 };
 
 const emailValidation = () => {
-    let input = form.elements.email
-    let error = input.parentNode.querySelector(".form-error");
-    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let input = inputGroup("email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
 
     if (input.value === "") {
-        error.textContent = "El correo electronico es requerido";
+        input.error.textContent = "El correo electronico es requerido";
     } else if (input.value?.length > 64) {
-        error.textContent = "El maximo de caracteres es de 64"
-    } else if (!regex.test(input.value)) {
-        error.textContent = "Debe ser un correo electronico valido"
+        input.error.textContent = "El maximo de caracteres es de 64";
+    } else if (!input.regex.test(input.value)) {
+        input.error.textContent = "Debe ser un correo electronico valido";
     } else {
-        error.textContent = ""
+        input.error.textContent = "";
     }
+
+    updateMapValid(input.error.textContent);
 };
 
 const phoneValidation = () => {
-    let input = form.elements.phone
-    let error = input.parentNode.querySelector(".form-error");
-    let regex = /^\+[1-9]\d{1,14}$/;
+    let input = inputGroup("phone", /^\+[1-9]\d{1,14}$/);
 
     if (input.value === "") {
-        error.textContent = "El numero de telefono es requerido";
+        input.error.textContent = "El numero de telefono es requerido";
     } else if (input.value?.length > 16) {
-        error.textContent = "El maximo de numeros es de 16"
-    } else if (!regex.test(input.value)) {
-        error.textContent = "Debe ser un numero de telefono valido. Ej. +123456789"
+        input.error.textContent = "El maximo de numeros es de 16";
+    } else if (!input.regex.test(input.value)) {
+        input.error.textContent = "Debe ser un numero de telefono valido. Ej. +123456789";
     } else {
-        error.textContent = ""
+        input.error.textContent = "";
     }
+
+    updateMapValid(input.error.textContent);
 };
 
 const messageValidation = () => {
-    let input = form.elements.message
-    let error = input.parentNode.querySelector(".form-error");
+    let input = inputGroup("message");
 
     if (input.value === "") {
-        error.textContent = "El numero de telefono es requerido";
+        input.error.textContent = "El numero de telefono es requerido";
     } else if (input.value?.length > 1024) {
-        error.textContent = "El maximo de caracteres debe ser 1024"
+        input.error.textContent = "El maximo de caracteres debe ser 1024";
     } else {
-        error.textContent = ""
+        input.error.textContent = "";
     }
+
+    updateMapValid(input.error.textContent);
 };
 
 if (form) {
@@ -70,16 +98,11 @@ if (form) {
         phoneValidation();
         messageValidation();
 
-        console.log("submit");
-    });
+        if (mapValid.length === 0) form.submit();
+    })
 
-    form.elements.fullName.addEventListener("input", fullNameValidation);
-    form.elements.email.addEventListener("input", emailValidation);
-    form.elements.phone.addEventListener("input", phoneValidation);
-    form.elements.message.addEventListener("input", messageValidation);
-
-    form.elements.fullName.addEventListener("blur", fullNameValidation);
-    form.elements.email.addEventListener("blur", emailValidation);
-    form.elements.phone.addEventListener("blur", phoneValidation);
-    form.elements.message.addEventListener("blur", messageValidation);
+    multipleEventListeners("fullName", ["input", "blur"], fullNameValidation);
+    multipleEventListeners("email",    ["input", "blur"], emailValidation   );
+    multipleEventListeners("phone",    ["input", "blur"], phoneValidation   );
+    multipleEventListeners("message",  ["input", "blur"], messageValidation );
 }
