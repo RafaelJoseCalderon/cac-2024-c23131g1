@@ -9,7 +9,7 @@
   <!-- <link rel="stylesheet" href="/css/global.css">  -->
   <link rel="stylesheet" href="/css/estilos-contacto.css">
 
-  <title>Contacto Zapaterias Nino</title>
+  <title>Zapaterias Nino</title>
 </head>
 
 <body>
@@ -32,34 +32,55 @@
     <div class="formulario">
       <form id="contact">
         <fieldset class="imput">
-          <label for="nombreyapellido">Nombre y Apellido: </label>
-          <input type="text" id="nombreyapellido" class="input-padron">
 
-          <label for="correoelectronico">Correo electronico</label>
-          <input type="email" id="correoelectronico" class="input-padron" placeholder="xxxx@xxxxx">
+          <div class="group-input">
+            <label for="fullName" class="form-label">Nombre y Apellido:</label>
+            <input id="fullName" type="text" name="fullName" class="form-control" placeholder="">
 
-          <label for="telefono">Telefono</label>
-          <input type="tel" id="telefono" class="input-padron" placeholder="(xx)xxxxxxxx">
+            <div class="form-error"></div>
+          </div>
 
-          <label for="mensaje">Mensaje</label>
-          <textarea cols="70" rows="10" id="mensaje" class="input-padron"></textarea>
+          <div class="group-input">
+            <label for="email" class="form-label">Correo electronico:</label>
+            <input id="email" type="email" name="email" class="form-control" placeholder="">
+
+            <div class="form-error"></div>
+          </div>
+
+          <div class="group-input">
+            <label for="phone" class="form-label">Telefono:</label>
+            <input id="phone" type="text" name="phone" class="form-control" placeholder="">
+
+            <div class="form-error"></div>
+          </div>
+
+          <div class="group-input">
+            <label for="message" class="form-label">Mensaje:</label>
+            <textarea id="message" name="message" class="form-control"></textarea>
+
+            <div class="form-error"></div>
+          </div>
         </fieldset>
 
         <fieldset>
           <legend>¿Que tipo de calzado busca?</legend>
 
-          <label for="radio-chicos">Niño/as</label>
-          <input type="radio" value="chicos" id="radio-chicos" name="radio">
+          <div class="group-input">
+            <label for="radio-children">Niños</label>
+            <input id="radio-children" type="radio" name="category" value="children">
 
-          <label for="radio-mujeres">Mujeres</label>
-          <input type="radio" value="mujeres" id="radio-mujeres" name="radio">
+            <label for="radio-ladies">Damas</label>
+            <input id="radio-ladies" type="radio" name="category" value="ladies">
 
-          <label for="radio-hombres">Hombres</label>
-          <input type="radio" value="hombres" id="radio-hombres" name="radio" checked>
+            <label for="radio-gentlemen">Caballeros</label>
+            <input id="radio-gentlemen" type="radio" name="category" value="gentlemen">
+          </div>
         </fieldset>
 
-        <label for="checkbox" class="label_checkbox">¿Le gustaría recibir nuestras ofertas por WhatsApp</label>
-        <input type="checkbox" id="checkbox" checked>
+        <div class="group-input">
+          <label for="checkboxWhatsapp" class="form-checkbox">¿Le gustaría recibir nuestras ofertas por WhatsApp?</label>
+          <input id="checkboxWhatsapp" type="checkbox" name="checkboxWhatsapp" class="form-control" checked>
+        </div>
 
         <input type="submit" id="submit" value="Enviar Formulario">
 
