@@ -1,72 +1,77 @@
 <!DOCTYPE html>
-
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width= device-width">
-        <title>Contacto Zapaterias Nino</title>
-        <link rel="stylesheet" href="/css/style.css">
-        <!-- <link rel="stylesheet" href="/css/global.css">  -->
-        <link rel="stylesheet" href="/css/estilos-contacto.css">
-    </head>
-  
-      <body>
-        <header class="header">
-          <div class="logo">
-            <img src="/img/logo1.jpg" alt="logo_nino">
-          </div>
-          <nav class="nav-bar">
-            <button class="menu-btn">Menu</button>
-            <ul class="nav-menu">
-              <li><a href="./index.html" class="nav-link">Inicio</a></li>
-              <li><a href="#" class="nav-link">Catalogo</a></li>
-              <li><a href="./products.html" class="nav-link">Contacto</a></li>
-              <li><a href="./ubicacion.html" class="nav-link">Ubicacion</a></li>
-            </ul>
-          </nav>         
-        
-        </header>
 
-        <main>
-          <div class="formulario">
-            <form>
-              <fieldset class="imput">
-                <label for="nombreyapellido">Nombre y Apellido: </label>
-                <input type="text" id="nombreyapellido" class="input-padron" required>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width= device-width">
 
-                <label for="correoelectronico">Correo electronico</label>
-                <input type="email" id="correoelectronico"class="input-padron" required placeholder="xxxx@xxxxx">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- <link rel="stylesheet" href="/css/global.css">  -->
+  <link rel="stylesheet" href="/css/estilos-contacto.css">
 
-                <label for="telefono">Telefono</label>
-                <input type="tel" id="telefono" class="input-padron" required placeholder="(xx)xxxxxxxx">
+  <title>Contacto Zapaterias Nino</title>
+</head>
 
-                <label for="mensaje">Mensaje</label>
-                <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
-              </fieldset>
-              
-              <fieldset>  
-                <legend>¿Que tipo de calzado busca?</legend>
-                  <label for="radio-chicos"><input type="radio" value="chicos" id="radio-chicos" name="radio"> Niño/as</label>
-                    
-                  <label for="radio-mujeres"><input type="radio" value="mujeres" id="radio-mujeres" name="radio"> Mujeres</label>
-                          
-                  <label for="radio-hombres"> <input type="radio" value="hombres" id="radio-hombres" name="radio" checked> Hombres</label>
-                        
-              </fieldset>
-                      
-                <input type="checkbox" id="checkbox" checked><label for="checkbox" class="label_checkbox"> ¿Le gustaría recibir nuestras ofertas por WhatsApp</label>
-                <input type="submit" id="submit" value="Enviar Formulario">
-                              
-            </form>
-           
-        </main>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="/img/logo1.jpg" alt="logo_nino">
+    </div>
+    <nav class="nav-bar">
+      <button class="menu-btn">Menu</button>
+      <ul class="nav-menu">
+        <li><a href="./index.html" class="nav-link">Inicio</a></li>
+        <li><a href="./products.html" class="nav-link">Catalogo</a></li>
+        <li><a href="#" class="nav-link">Contacto</a></li>
+        <li><a href="./ubicacion.html" class="nav-link">Ubicacion</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <footer>
-                    <p class="copyright">Codo a Codo 2024</p>
-        </footer>
-        <script src="index.js"></script>
-        </form>
-          </div>
-        </main>
-    </body>
+  <main>
+    <div class="formulario">
+      <form id="contact">
+        <fieldset class="imput">
+          <label for="nombreyapellido">Nombre y Apellido: </label>
+          <input type="text" id="nombreyapellido" class="input-padron">
+
+          <label for="correoelectronico">Correo electronico</label>
+          <input type="email" id="correoelectronico" class="input-padron" placeholder="xxxx@xxxxx">
+
+          <label for="telefono">Telefono</label>
+          <input type="tel" id="telefono" class="input-padron" placeholder="(xx)xxxxxxxx">
+
+          <label for="mensaje">Mensaje</label>
+          <textarea cols="70" rows="10" id="mensaje" class="input-padron"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>¿Que tipo de calzado busca?</legend>
+
+          <label for="radio-chicos">Niño/as</label>
+          <input type="radio" value="chicos" id="radio-chicos" name="radio">
+
+          <label for="radio-mujeres">Mujeres</label>
+          <input type="radio" value="mujeres" id="radio-mujeres" name="radio">
+
+          <label for="radio-hombres">Hombres</label>
+          <input type="radio" value="hombres" id="radio-hombres" name="radio" checked>
+        </fieldset>
+
+        <label for="checkbox" class="label_checkbox">¿Le gustaría recibir nuestras ofertas por WhatsApp</label>
+        <input type="checkbox" id="checkbox" checked>
+
+        <input type="submit" id="submit" value="Enviar Formulario">
+
+      </form>
+
+  </main>
+
+  <footer>
+    <p class="copyright">Codo a Codo 2024</p>
+  </footer>
+
+  <script src="js/validation.js"></script>
+</body>
+
 </html>
