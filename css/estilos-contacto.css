@@ -1,3 +1,15 @@
+
+main {
+  background-image: linear-gradient( rgb(7, 187, 240) #0098cd #0078a6);
+
+}
+
+body{
+  background-color:aliceblue;
+  background-image: none;
+
+}
+
 form {
     margin: 5% 5%;
     border: 0;
