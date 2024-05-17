@@ -7,11 +7,11 @@ const multipleEventListeners = (name, events, fn) => {
     events.forEach(e => input.addEventListener(e, fn, false));
 }
 
-const updateMapValid = (errortextContent) => {
+const updateMapValid = (errortextContent, name) => {
     if (errortextContent === "") {
-        mapValid.push("fullName");
+        mapValid.pop(name);
     } else {
-        mapValid.pop("fullName");
+        mapValid.push(name);
     }
 }
 // end auxiliary functions
@@ -28,8 +28,8 @@ const inputGroup = (name, regex) => {
 }
 
 const fullNameValidation = () => {
-    let input = inputGroup("fullName", /^[A-Za-z]+$/);
-
+    let input = inputGroup("fullName", /^[a-zA-Z\s]+$/);
+    
     if (input.value === "") {
         input.error.textContent = "El nombre y apellido son requeridos";
     } else if (input.value?.length > 15) {
@@ -40,7 +40,7 @@ const fullNameValidation = () => {
         input.error.textContent = "";
     }
 
-    updateMapValid(input.error.textContent);
+    updateMapValid(input.error.textContent, "fullName");
 };
 
 const emailValidation = () => {
@@ -56,7 +56,7 @@ const emailValidation = () => {
         input.error.textContent = "";
     }
 
-    updateMapValid(input.error.textContent);
+    updateMapValid(input.error.textContent, "email");
 };
 
 const phoneValidation = () => {
@@ -72,7 +72,7 @@ const phoneValidation = () => {
         input.error.textContent = "";
     }
 
-    updateMapValid(input.error.textContent);
+    updateMapValid(input.error.textContent, "phone");
 };
 
 const messageValidation = () => {
@@ -86,7 +86,7 @@ const messageValidation = () => {
         input.error.textContent = "";
     }
 
-    updateMapValid(input.error.textContent);
+    updateMapValid(input.error.textContent, "message");
 };
 
 if (form) {
