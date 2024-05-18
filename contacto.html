@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width= device-width">
-  <title>Contacto Zapaterias Nino</title>
+
   <link rel="stylesheet" href="/css/style.css">
-  <!-- <link rel="stylesheet" href="/css/global.css">  -->
-  <link rel="stylesheet" href="/css/estilos-contacto.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="statics/fontawesome-free-652-web/css/all.min.css">
+  <link rel="stylesheet" href="/css/estilos-contacto.css">
+
+  <title>Zapaterias Nino</title>
 </head>
 
 <body>
@@ -22,58 +22,83 @@
       <button class="menu-btn">Menu</button>
       <ul class="nav-menu">
         <li><a href="./index.html" class="nav-link">Inicio</a></li>
-        <li><a href="#" class="nav-link">Catalogo</a></li>
-        <li><a href="./products.html" class="nav-link">Contacto</a></li>
+        <li><a href="./products.html" class="nav-link">Catalogo</a></li>
+        <li><a href="#" class="nav-link">Contacto</a></li>
         <li><a href="./ubicacion.html" class="nav-link">Ubicacion</a></li>
       </ul>
     </nav>
-
   </header>
 
   <main>
     <div class="formulario">
-      <form>
+      <form id="contact" action="show_data.html" target="_blank">
         <fieldset class="imput">
-          <label for="nombreyapellido">Nombre y Apellido: </label>
-          <input type="text" id="nombreyapellido" class="input-padron" required>
 
-          <label for="correoelectronico">Correo electronico</label>
-          <input type="email" id="correoelectronico" class="input-padron" required placeholder="xxxx@xxxxx">
+          <div class="group-input">
+            <label for="fullName" class="form-label">Nombre y Apellido:</label>
+            <input id="fullName" type="text" name="fullName" class="form-control" placeholder="">
 
-          <label for="telefono">Telefono</label>
-          <input type="tel" id="telefono" class="input-padron" required placeholder="(xx)xxxxxxxx">
+            <div class="form-error"></div>
+          </div>
 
-          <label for="mensaje">Mensaje</label>
-          <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+          <div class="group-input">
+            <label for="email" class="form-label">Correo electronico:</label>
+            <input id="email" type="email" name="email" class="form-control" placeholder="">
+
+            <div class="form-error"></div>
+          </div>
+
+          <div class="group-input">
+            <label for="phone" class="form-label">Telefono:</label>
+            <input id="phone" type="text" name="phone" class="form-control" placeholder="">
+
+            <div class="form-error"></div>
+          </div>
+
+          <div class="group-input">
+            <label for="message" class="form-label">Mensaje:</label>
+            <textarea id="message" name="message" class="form-control"></textarea>
+
+            <div class="form-error"></div>
+          </div>
+
         </fieldset>
 
         <fieldset>
           <legend>¿Que tipo de calzado busca?</legend>
-          <label for="radio-chicos"><input type="radio" value="chicos" id="radio-chicos" name="radio"> Niño/as</label>
 
-          <label for="radio-mujeres"><input type="radio" value="mujeres" id="radio-mujeres" name="radio">
-            Mujeres</label>
+          <div class="group-input">
+            <label for="radio-children">Niños</label>
+            <input id="radio-children" type="radio" name="category" value="children" checked>
 
-          <label for="radio-hombres"> <input type="radio" value="hombres" id="radio-hombres" name="radio" checked>
-            Hombres</label>
+            <label for="radio-ladies">Damas</label>
+            <input id="radio-ladies" type="radio" name="category" value="ladies">
 
+            <label for="radio-gentlemen">Caballeros</label>
+            <input id="radio-gentlemen" type="radio" name="category" value="gentlemen">
+          </div>
         </fieldset>
 
-        <input type="checkbox" id="checkbox" checked><label for="checkbox" class="label_checkbox"> ¿Le gustaría recibir
-          nuestras ofertas por WhatsApp</label>
-        <input type="submit" id="submit" value="Enviar Formulario">
+        <div class="group-input">
+          <label for="checkboxWhatsapp" class="form-checkbox">¿Le gustaría recibir nuestras ofertas por
+            WhatsApp?</label>
+          <input id="checkboxWhatsapp" type="checkbox" name="checkboxWhatsapp" class="form-control" checked>
+        </div>
+
+        <button type="submit">Enviar Formulario</button>
+
 
       </form>
 
+    </div>
   </main>
 
 
 
-  </form>
-  </div>
+ 
 
   <div>
-    <footer >
+    <footer>
 
       <div class="caption">
         <span>Zapateria Nino - © 2024</span>
@@ -90,6 +115,8 @@
     </footer>
     <script src="js/script.js"></script>
   </div>
+
+
 </body>
 
 </html>
