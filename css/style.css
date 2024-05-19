@@ -8,7 +8,7 @@
 
 body {
     margin: 0;
-    background-image: url("img/girls-training.jpg");
+    background-image: url("../img/girls-training.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     /*font-family: Arial, sans-serif;*/
