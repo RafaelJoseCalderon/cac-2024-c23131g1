@@ -1,50 +1,62 @@
-
-main {
-  background-image: linear-gradient( rgb(7, 187, 240) #0098cd #0078a6);
-
+*{
+  border: none;
 }
 
 body{
-  background-color:aliceblue;
+  background-color: white;
   background-image: none;
 
 }
 
-form {
-    margin: 5% 5%;
-    border: 0;
+  form {
     
+    margin: auto;
+    margin-top: 5%;
+    width: 75%;
+              
   }
   
+
   form label, form legend{
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
   }
   
-  .input-padron{
+  input{
     display: block;
     margin: 0 0 20px;
     padding: 10px 25px;
     width: 50%;
+    
+    border: solid black 1px;
+  }
+
+  textarea{
+    border: solid black 1px;
   }
   
-  .checkbox{
-    margin:20px 0;
+  #radio {
+    display: inline-block;
   }
+
+  #checkbox {
+    display: flex;
+  }
+  
   
   select {
     margin: 1em 5px;
     font-size: medium;
   }
   
-  .enviar{
+  button{
     width: 40%;
     padding: 15px 0;
     font-size: medium;
     font-weight: bold;
     color:white;
-    background: orange;
+    background: #5ABDAD;
     border:none;
     border-radius: 5px;
     transition: 1s all;

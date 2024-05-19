@@ -14,17 +14,6 @@
     --base900: #373e43;
     --base950: #24282d;
   
-    /* --base50: #f0faff;
-    --base100: #dff5ff;
-    --base200: #b5ecff;
-    --base300: #79e0ff;
-    --base400: #32d1fe;
-    --base500: #07bbf0;
-    --base600: #0098cd;
-    --base700: #0078a6;
-    --base800: #036689;
-    --base900: #095471;
-    --base950: #06354b; */
   
     --header-height: 4rem;
   }
@@ -47,5 +36,8 @@
   main {
     flex: 1;
   }
+
+/* navbar*/
+
   
   /* #endregion */
