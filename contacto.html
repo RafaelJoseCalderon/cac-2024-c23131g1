@@ -4,11 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width= device-width">
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
 
+  <link rel="stylesheet" href="/css/global_.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="/css/contacto.css">
+  <link rel="stylesheet" href="/css/footer.css">
+
   <link rel="stylesheet" href="statics/fontawesome-free-652-web/css/all.min.css">
-  <link rel="stylesheet" href="/css/estilos-contacto.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
   <title>Zapaterias Nino</title>
 </head>
@@ -36,28 +46,28 @@
 
           <div class="group-input">
             <label for="fullName" class="form-label">Nombre y Apellido:</label>
-            <input id="fullName" type="text" name="fullName" class="form-control" placeholder="">
+            <input id="fullName" type="text" name="fullName" class="form-control" placeholder="xxxxxxxx">
 
             <div class="form-error"></div>
           </div>
 
           <div class="group-input">
             <label for="email" class="form-label">Correo electronico:</label>
-            <input id="email" type="email" name="email" class="form-control" placeholder="">
+            <input id="email" type="email" name="email" class="form-control" placeholder="xxxxxx@xxxx">
 
             <div class="form-error"></div>
           </div>
 
           <div class="group-input">
             <label for="phone" class="form-label">Telefono:</label>
-            <input id="phone" type="text" name="phone" class="form-control" placeholder="">
+            <input id="phone" type="text" name="phone" class="form-control" placeholder="xx-xxxxxxx">
 
             <div class="form-error"></div>
           </div>
 
           <div class="group-input">
             <label for="message" class="form-label">Mensaje:</label>
-            <textarea id="message" name="message" class="form-control"></textarea>
+            <textarea id="message" name="message" class="form-control" cols="47" rows="10"></textarea>
 
             <div class="form-error"></div>
           </div>
@@ -65,10 +75,11 @@
         </fieldset>
 
         <fieldset>
-          <legend>¿Que tipo de calzado busca?</legend>
+         
+          <legend> <br>¿Que tipo de calzado busca?</legend>
 
-          <div class="group-input">
-            <label for="radio-children">Niños</label>
+          <div class="group-input" id="radio">
+            <label for="radio-children"><br>Niños</label>
             <input id="radio-children" type="radio" name="category" value="children" checked>
 
             <label for="radio-ladies">Damas</label>
@@ -79,44 +90,39 @@
           </div>
         </fieldset>
 
-        <div class="group-input">
-          <label for="checkboxWhatsapp" class="form-checkbox">¿Le gustaría recibir nuestras ofertas por
-            WhatsApp?</label>
+        <div class="group-input" id="checkbox">
+          <label for="checkboxWhatsapp" class="form-checkbox">¿Le gustaría recibir nuestras ofertas por WhatsApp?</label>
+
           <input id="checkboxWhatsapp" type="checkbox" name="checkboxWhatsapp" class="form-control" checked>
         </div>
 
-        <button type="submit">Enviar Formulario</button>
-
+        <button type="submit">Enviar Formulario</button><br>
 
       </form>
 
     </div>
   </main>
+  
+  <footer>
 
+    <div class="caption">
+      <span>Zapateria Nino</span>
+      <span>zapateria.nino@gmail.com</span>
+      <span>+54 11 xxx xxx-xxxx</span>
+    </div>
 
+    <p class="icons">
+      <a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://es-la.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+    </p>
 
+  </footer>
+
+  <script src="./js/nav-bar.js"></script>
+  
+  <script src="./js/validation.js"></script>
  
-
-  <div>
-    <footer>
-
-      <div class="caption">
-        <span>Zapateria Nino - © 2024</span>
-        <span>zapateria.nino@gmail.com</span>
-        <span>+54 11 xxx xxx-xxxx</span>
-      </div>
-
-      <p class="icons">
-        <a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://es-la.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
-      </p>
-
-    </footer>
-    <script src="js/script.js"></script>
-  </div>
-
-
-</body>
+  </body>
 
 </html>

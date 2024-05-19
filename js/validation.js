@@ -79,7 +79,7 @@ const messageValidation = () => {
     let input = inputGroup("message");
 
     if (input.value === "") {
-        input.error.textContent = "El numero de telefono es requerido";
+        input.error.textContent = "El mensaje es requerido";
     } else if (input.value?.length > 1024) {
         input.error.textContent = "El maximo de caracteres debe ser 1024";
     } else {
